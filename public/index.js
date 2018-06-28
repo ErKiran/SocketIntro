@@ -2,16 +2,18 @@
 
     socket.on('connect', () => {
       console.log('Connected to server');
-      socket.emit('CreateEmail',{
-        to:'REactde@gmail.com',
-        text:'Hello REact'
-
+      
+      socket.emit('CreateMessage',{
+        from:"Kiran",
+        text:"how is socket Working"
       });
+
     });
 
     socket.on('disconnect', () => {
       console.log('Disconnected from server');
     });
-    socket.on('newEmail',(email)=>{
-      console.log('Email has arrived',email);
+
+    socket.on('newMessage',(message)=>{
+      console.log('Message has arrived',message);
     });
