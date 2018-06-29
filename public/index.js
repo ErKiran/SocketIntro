@@ -2,12 +2,6 @@
 
     socket.on('connect', () => {
       console.log('Connected to server');
-      
-      socket.emit('CreateMessage',{
-        from:"Kiran",
-        text:"how is socket Working"
-      });
-
     });
 
     socket.on('disconnect', () => {
